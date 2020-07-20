@@ -19,7 +19,6 @@ const PRECACHE_LIST = [
   "./js/bootstrap.min.js",
   "./js/hux-blog.min.js",
   "./js/snackbar.js",
-  "./img/icon_wechat.png",
   "./img/avatar-hux.jpg",
   "./img/home-bg.jpg",
   "./img/404-bg.jpg",
@@ -133,7 +132,7 @@ var fetchHelper = {
   fetchThenCache: function(request){
     // Requests with mode "no-cors" can result in Opaque Response,
     // Requests to Allow-Control-Cross-Origin: * can't include credentials.
-    const init = { mode: "cors", credentials: "omit" } 
+    const init = { mode: "cors", credentials: "omit" }
 
     const fetched = fetch(request, init)
     const fetchedCopy = fetched.then(resp => resp.clone());
@@ -143,12 +142,12 @@ var fetchHelper = {
     Promise.all([fetchedCopy, caches.open(CACHE)])
       .then(([response, cache]) => response.ok && cache.put(request, response))
       .catch(_ => {/* eat any errors */})
-    
+
     return fetched;
   },
 
   cacheFirst: function(url){
-    return caches.match(url) 
+    return caches.match(url)
       .then(resp => resp || this.fetchThenCache(url))
       .catch(_ => {/* eat any errors */})
   }
@@ -188,7 +187,7 @@ self.addEventListener('fetch', event => {
     const cached = caches.match(event.request);
     const fetched = fetch(getCacheBustingUrl(event.request), { cache: "no-store" });
     const fetchedCopy = fetched.then(resp => resp.clone());
-    
+
     // Call respondWith() with whatever we get first.
     // Promise.race() resolves with first one settled (even rejected)
     // If the fetch fails (e.g disconnected), wait for the cache.
@@ -245,7 +244,7 @@ function sendMessageToClientsAsync(msg) {
 /**
  * if content modified, we can notify clients to refresh
  * TODO: Gh-pages rebuild everything in each release. should find a workaround (e.g. ETag with cloudflare)
- * 
+ *
  * @param  {Promise<response>} cachedResp  [description]
  * @param  {Promise<response>} fetchedResp [description]
  * @return {Promise}
