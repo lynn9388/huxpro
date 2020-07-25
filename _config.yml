@@ -11,7 +11,7 @@ baseurl: "/huxpro"                             # for example, '/blog' if your bl
 future: true
 
 # SNS settings
-RSS: false
+RSS: true
 weibo_username:     huxpro
 zhihu_username:     huxpro
 github_username:    huxpro
@@ -39,6 +39,7 @@ anchorjs: true                          # if you want to customize anchor. check
 # `$ gem install jekyll-paginate`
 plugins:
   - jekyll-paginate
+  - jekyll-feed
   - jekyll-seo-tag
 
 
