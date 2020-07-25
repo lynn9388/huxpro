@@ -1,13 +1,13 @@
 # Site settings
 title: Huxpro
-header-img: img/home-bg.jpg
+header-img: /assets/img/home-bg.jpg
 description: Jekyll theme
 baseurl: /huxpro
 
 # Sidebar settings
 sidebar: true
 sidebar-about-description: For the next quantum leap<br>离开世界之前，一切都是过程
-sidebar-avatar: /img/avatar-hux-ny.jpg
+sidebar-avatar: /assets/img/avatar-hux-ny.jpg
 
 # SNS settings
 RSS: true

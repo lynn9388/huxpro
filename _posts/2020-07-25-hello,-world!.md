@@ -4,7 +4,7 @@ title:      "Hello, world!"
 subtitle:   "Hi"
 date:       2020-07-25 12:00:00
 author:     "Lynn"
-header-img: "img/about-bg.jpg"
+header-img: "/assets/img/about-bg.jpg"
 header-mask: 0.3
 catalog:    true
 tags:
