@@ -3,6 +3,8 @@ title: Huxpro
 header-img: /assets/img/home-bg.jpg
 description: Jekyll theme
 baseurl: /huxpro
+owner: Lynn
+published_at: 2019
 
 # Sidebar settings
 sidebar: true
