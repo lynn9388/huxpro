@@ -1,11 +1,8 @@
-{% comment %}
-@param {Boolean} center
-{% endcomment %}
-
+<!-- SNS -->
 <ul class="list-inline {% if include.center %}text-center{% endif %}">
     {% if site.RSS %}
     <li>
-        <a href="{{ "/feed.xml" | prepend: site.baseurl }}">
+        <a href="{{ site.baseurl }}/feed.xml">
             <span class="fa-stack fa-lg">
                 <i class="fas fa-circle fa-stack-2x"></i>
                 <i class="fas fa-rss fa-stack-1x fa-inverse"></i>
