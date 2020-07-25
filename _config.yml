@@ -21,7 +21,6 @@ github_username:    lynn9388
 # Build settings
 paginate: 10
 timezone: Asia/Shanghai
-page-mathjax: false
 kramdown:
   syntax_highlighter_opts:
     block:
