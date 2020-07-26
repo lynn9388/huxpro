@@ -8,8 +8,8 @@ published_at: 2019
 
 # Sidebar settings
 sidebar: true
-sidebar-about-description: For the next quantum leap<br>离开世界之前，一切都是过程
-sidebar-avatar: /assets/img/avatar-hux-ny.jpg
+sidebar_avatar: /assets/img/avatar-hux-ny.jpg
+sidebar_about_description: For the next quantum leap<br>离开世界之前，一切都是过程
 
 # SNS settings
 RSS: true
