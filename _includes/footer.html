@@ -19,19 +19,6 @@
     </div>
 </footer>
 
-<!-- jQuery -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg==" crossorigin="anonymous"></script>
-
-<!-- Bootstrap Core JavaScript -->
-<!-- Currently, only navbar scroll-down effect at desktop still depends on this -->
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js" integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd" crossorigin="anonymous"></script>
-
-<!-- Custom Theme JavaScript -->
-<script src="{{ "/assets/js/hux-blog.js " | prepend: site.baseurl }}"></script>
-
-<!-- Simple Jekyll Search -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/simple-jekyll-search/1.7.12/simple-jekyll-search.min.js" integrity="sha512-APy7Ff/y4pdIHleqiTMcRZ8Wu6tjfqhJpgAcaCvTuFQPj/G+/A5u0uZi/DkfkuLQ6FeFmDJgh/zl0y3If/VUyA==" crossorigin="anonymous"></script>
-
 <!-- MathJax https://github.com/mathjax/MathJax/issues/2220 -->
 <script>
     MathJax = {
@@ -58,7 +45,8 @@
 <!-- async load function -->
 <script>
     function async(u, c) {
-        var d = document, t = 'script',
+        var d = document,
+            t = 'script',
             o = d.createElement(t),
             s = d.getElementsByTagName(t)[0];
         o.src = u;
@@ -245,32 +233,3 @@
     _render();
 </script>
 {% endif %}
-
-<script>
-    // Toggle search page
-    $(document).ready(function () {
-        var $searchPage = $('.search-page');
-        var $searchOpen = $('.search-icon');
-        var $searchClose = $('.search-icon-close');
-        var $searchInput = $('#search-input');
-        var $body = $('body');
-
-        $searchOpen.on('click', function (e) {
-            e.preventDefault();
-            $searchPage.toggleClass('search-active');
-            var prevClasses = $body.attr('class') || '';
-            setTimeout(function () {
-                $body.addClass('no-scroll');
-            }, 400)
-
-            if ($searchPage.hasClass('search-active')) {
-                $searchClose.on('click', function (e) {
-                    e.preventDefault();
-                    $searchPage.removeClass('search-active');
-                    $body.attr('class', prevClasses);  // from closure
-                });
-                $searchInput.focus();
-            }
-        });
-    });
-</script>

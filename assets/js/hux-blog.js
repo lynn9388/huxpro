@@ -7,7 +7,7 @@
  /*!
  * Hux Blog v1.6.0 (http://startbootstrap.com)
  * Copyright 2016 @huxpro
- * Licensed under Apache 2.0 
+ * Licensed under Apache 2.0
  */
 
 // Tooltip Init
@@ -18,7 +18,7 @@
 
 
 // make all images responsive
-/* 
+/*
  * Unuse by Hux
  * actually only Portfolio-Pages can't use it and only post-img need it.
  * so I modify the _layout/post and CSS to make post-img responsive!
@@ -26,6 +26,33 @@
 // $(function() {
 //  $("img").addClass("img-responsive");
 // });
+
+// Toggle search page
+$(document).ready(function () {
+    var $searchPage = $('.search-page');
+    var $searchOpen = $('.search-icon');
+    var $searchClose = $('.search-icon-close');
+    var $searchInput = $('#search-input');
+    var $body = $('body');
+
+    $searchOpen.on('click', function (e) {
+        e.preventDefault();
+        $searchPage.toggleClass('search-active');
+        var prevClasses = $body.attr('class') || '';
+        setTimeout(function () {
+            $body.addClass('no-scroll');
+        }, 400)
+
+        if ($searchPage.hasClass('search-active')) {
+            $searchClose.on('click', function (e) {
+                e.preventDefault();
+                $searchPage.removeClass('search-active');
+                $body.attr('class', prevClasses);  // from closure
+            });
+            $searchInput.focus();
+        }
+    });
+});
 
 // responsive tables
 $(document).ready(function() {
@@ -48,7 +75,7 @@ jQuery(document).ready(function($) {
     //primary navigation slide-in effect
     if ($(window).width() > MQL) {
         var headerHeight = $('.navbar-custom').height(),
-            bannerHeight  = $('.intro-header .container').height();     
+            bannerHeight  = $('.intro-header .container').height();
         $(window).on('scroll', {
                 previousTop: 0
             },
