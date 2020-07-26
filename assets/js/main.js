@@ -1,31 +1,57 @@
-/*!
- * Clean Blog v1.0.0 (http://startbootstrap.com)
- * Copyright 2015 Start Bootstrap
- * Licensed under Apache 2.0 (https://github.com/IronSummitMedia/startbootstrap/blob/gh-pages/LICENSE)
- */
-
- /*!
- * Hux Blog v1.6.0 (http://startbootstrap.com)
- * Copyright 2016 @huxpro
- * Licensed under Apache 2.0
- */
-
-// Tooltip Init
-// Unuse by Hux since V1.6: Titles now display by default so there is no need for tooltip
-// $(function() {
-//     $("[data-toggle='tooltip']").tooltip();
-// });
-
-
-// make all images responsive
 /*
- * Unuse by Hux
- * actually only Portfolio-Pages can't use it and only post-img need it.
- * so I modify the _layout/post and CSS to make post-img responsive!
+ * Navigation
  */
-// $(function() {
-//  $("img").addClass("img-responsive");
-// });
+
+// Drop Bootstarp low-performance Navbar
+// Use customize navbar with high-quality material design animation
+// in high-perf jank-free CSS3 implementation
+var $body = document.body;
+var $toggle = document.querySelector('.navbar-toggle');
+var $navbar = document.querySelector('#huxblog_navbar');
+var $collapse = document.querySelector('.navbar-collapse');
+
+var __HuxNav__ = {
+    close: function () {
+        $navbar.className = " ";
+        // wait until animation end.
+        setTimeout(function () {
+            // prevent frequently toggle
+            if ($navbar.className.indexOf('in') < 0) {
+                $collapse.style.height = "0px"
+            }
+        }, 400)
+    },
+    open: function () {
+        $collapse.style.height = "auto"
+        $navbar.className += " in";
+    }
+}
+
+// Bind Event
+$toggle.addEventListener('click', function (e) {
+    if ($navbar.className.indexOf('in') > 0) {
+        __HuxNav__.close()
+    } else {
+        __HuxNav__.open()
+    }
+})
+
+/**
+ * Since Fastclick is used to delegate 'touchstart' globally
+ * to hack 300ms delay in iOS by performing a fake 'click',
+ * Using 'e.stopPropagation' to stop 'touchstart' event from
+ * $toggle/$collapse will break global delegation.
+ *
+ * Instead, we use a 'e.target' filter to prevent handler
+ * added to document close HuxNav.
+ *
+ * Also, we use 'click' instead of 'touchstart' as compromise
+ */
+document.addEventListener('click', function (e) {
+    if (e.target == $toggle) return;
+    if (e.target.className == 'icon-bar') return;
+    __HuxNav__.close();
+})
 
 // Toggle search page
 $(document).ready(function () {
