@@ -1,6 +1,7 @@
-/*
- * Navigation
- */
+---
+---
+
+// Navigation
 
 // Drop Bootstarp low-performance Navbar
 // Use customize navbar with high-quality material design animation
@@ -53,6 +54,38 @@ document.addEventListener('click', function (e) {
     __HuxNav__.close();
 })
 
+
+// Search
+
+// https://stackoverflow.com/questions/1912501/unescape-html-entities-in-javascript
+function htmlDecode(input) {
+    var e = document.createElement('textarea');
+    e.innerHTML = input;
+    // handle case of empty input
+    return e.childNodes.length === 0 ? "" : e.childNodes[0].nodeValue;
+}
+
+SimpleJekyllSearch({
+    searchInput: document.getElementById('search-input'),
+    resultsContainer: document.getElementById('search-results'),
+    json: '{{ site.baseurl }}/assets/search.json',
+    searchResultTemplate: '<div class="post-preview item"><a href="{url}"><h2 class="post-title">{title}</h2><h3 class="post-subtitle">{subtitle}</h3><hr></a></div>',
+    noResultsText: 'No results',
+    limit: 50,
+    fuzzy: false,
+    // a hack to get escaped subtitle unescaped. for some reason,
+    // post.subtitle w/o escape filter nuke entire search.
+    templateMiddleware: function (prop, value, template) {
+        if (prop === 'subtitle' || prop === 'title') {
+            if (value.indexOf("code")) {
+                return htmlDecode(value);
+            } else {
+                return value;
+            }
+        }
+    }
+});
+
 // Toggle search page
 $(document).ready(function () {
     var $searchPage = $('.search-page');
@@ -79,6 +112,7 @@ $(document).ready(function () {
         }
     });
 });
+
 
 // responsive tables
 $(document).ready(function() {
