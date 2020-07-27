@@ -58,47 +58,6 @@
     }
 </script>
 
-<!--
-     Because of the native support for backtick-style fenced code blocks
-     right within the Markdown is landed in Github Pages,
-     From V1.6, There is no need for Highlight.js,
-     so Huxblog drops it officially.
-
-     - https://github.com/blog/2100-github-pages-now-faster-and-simpler-with-jekyll-3-0
-     - https://help.github.com/articles/creating-and-highlighting-code-blocks/
-     - https://github.com/jneen/rouge/wiki/list-of-supported-languages-and-lexers
--->
-<!--
-    <script>
-        async("http://cdn.bootcss.com/highlight.js/8.6/highlight.min.js", function(){
-            hljs.initHighlightingOnLoad();
-        })
-    </script>
-    <link href="http://cdn.bootcss.com/highlight.js/8.6/styles/github.min.css" rel="stylesheet">
--->
-
-
-{% if page.plchart %}
-<!-- jquery.tagcloud.js -->
-<script>
-    // https://stackoverflow.com/questions/9975810/make-iframe-automatically-adjust-height-according-to-the-contents-without-using
-    function resizeIframe(obj) {
-        obj.style.height = obj.contentWindow.document.body.scrollHeight + 'px';
-    }
-
-    $(document).ready(function () {
-        var $chart = document.querySelector("#chart");
-        $chart.onload = function () {
-            resizeIframe($chart)
-        }
-        window.addEventListener("resize", () => {
-            resizeIframe($chart)
-        });
-    })
-</script>
-{% endif %}
-
-
 {% if page.title == 'Archive' %}
 <!-- jquery.tagcloud.js -->
 <script>
