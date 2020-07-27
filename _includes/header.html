@@ -83,7 +83,7 @@
         <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
             <div class="site-heading" {% if include.short %}id="tag-heading"{% endif %}>
                 <h1>{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}</h1>
-                <span class="subheading">{{ page.description }}</span>
+                <span class="subheading">{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}</span>
             </div>
         </div>
         </div>
