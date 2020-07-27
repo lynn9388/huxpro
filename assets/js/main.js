@@ -14,9 +14,9 @@ var $collapse = document.querySelector('.navbar-collapse');
 var __HuxNav__ = {
     close: function () {
         $navbar.className = " ";
-        // wait until animation end.
+        // Wait until animation end.
         setTimeout(function () {
-            // prevent frequently toggle
+            // Prevent frequently toggle
             if ($navbar.className.indexOf('in') < 0) {
                 $collapse.style.height = "0px"
             }
@@ -28,30 +28,13 @@ var __HuxNav__ = {
     }
 }
 
-// Bind Event
+// Bind click event for toggle button in navigation bar
 $toggle.addEventListener('click', function (e) {
     if ($navbar.className.indexOf('in') > 0) {
         __HuxNav__.close()
     } else {
         __HuxNav__.open()
     }
-})
-
-/**
- * Since Fastclick is used to delegate 'touchstart' globally
- * to hack 300ms delay in iOS by performing a fake 'click',
- * Using 'e.stopPropagation' to stop 'touchstart' event from
- * $toggle/$collapse will break global delegation.
- *
- * Instead, we use a 'e.target' filter to prevent handler
- * added to document close HuxNav.
- *
- * Also, we use 'click' instead of 'touchstart' as compromise
- */
-document.addEventListener('click', function (e) {
-    if (e.target == $toggle) return;
-    if (e.target.className == 'icon-bar') return;
-    __HuxNav__.close();
 })
 
 
