@@ -22,6 +22,7 @@ github_username:    lynn9388
 
 # Build settings
 paginate: 10
+permalink: pretty
 timezone: Asia/Shanghai
 kramdown:
   syntax_highlighter_opts:
