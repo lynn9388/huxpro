@@ -6,7 +6,7 @@
                 {% include sns.html center=true %}
 
                 <p class="copyright text-muted">
-                    {% assign now_year = "now" | date: "%Y" | plus: 0 %}
+                    {% assign now_year = 'now' | date: '%Y' | plus: 0 %}
                     Copyright &copy; {{ site.owner }} {{ site.published_at }}{% if site.published_at < now_year %}-{{ now_year }}{% endif %}
                     <br>
                     Powered by <a href="https://github.com/lynn9388/huxpro">Huxpro</a> |
@@ -45,68 +45,12 @@
 </script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.0.5/es5/tex-chtml.js" integrity="sha512-WIPUeuVusAT6dUtN6xKArYCBEa76ltyvaz3ltvQd+dy7ISdGJv1Y3y7eDBEF986YfNtmZGLdAaEBSgeBb+8OSg==" crossorigin="anonymous"></script>
 
-<!-- Side Catalog -->
-{% unless page.no-catalog %}
-<script type="text/javascript">
-    function generateCatalog(selector) {
-
-        // interop with multilangual
-        if ('{{ page.multilingual }}' == 'true') {
-            _containerSelector = 'div.post-container.active'
-        } else {
-            _containerSelector = 'div.post-container'
-        }
-
-        // init
-        var P = $(_containerSelector), a, n, t, l, i, c;
-        a = P.find('h1,h2,h3,h4,h5,h6');
-
-        // clean
-        $(selector).html('')
-
-        // appending
-        a.each(function () {
-            n = $(this).prop('tagName').toLowerCase();
-            i = "#" + $(this).prop('id');
-            t = $(this).text();
-            c = $('<a href="' + i + '" rel="nofollow">' + t + '</a>');
-            l = $('<li class="' + n + '_nav"></li>').append(c);
-            $(selector).append(l);
-        });
-        return true;
-    }
-
-    generateCatalog(".catalog-body");
-
-    // toggle side catalog
-    $(".catalog-toggle").click((function (e) {
-        e.preventDefault();
-        $('.side-catalog').toggleClass("fold")
-    }))
-
-    /*
-     * Doc: https://github.com/davist11/jQuery-One-Page-Nav
-     * Fork by Hux to support padding
-     */
-    async("https://cdnjs.cloudflare.com/ajax/libs/jquery-one-page-nav/3.0.0/jquery.nav.min.js", function () {
-        $('.catalog-body').onePageNav({
-            currentClass: "active",
-            changeHash: !1,
-            easing: "swing",
-            filter: "",
-            scrollSpeed: 700,
-            scrollOffset: 0,
-            scrollThreshold: .2,
-            begin: null,
-            end: null,
-            scrollChange: null,
-            padding: 80
-        });
-    });
-</script>
-{% endunless %}
-
 {% if page.multilingual %}
 <!-- Multilingual -->
 <script src="{{ site.baseurl }}/assets/js/multilingual.js"></script>
+{% endif %}
+
+{% if page.layout == 'post' and page.no_catalog != false %}
+<!-- Side Catalog -->
+<script src="{{ site.baseurl }}/assets/js/catalog.js"></script>
 {% endif %}
