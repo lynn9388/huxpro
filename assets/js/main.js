@@ -37,6 +37,13 @@ $toggle.addEventListener('click', function (e) {
     }
 })
 
+// Close toggle button when click outside toggle navigation
+document.addEventListener('click', function (e) {
+    if (e.target == $toggle) return;
+    if (e.target.className == 'icon-bar') return;
+    __HuxNav__.close();
+})
+
 
 // Search
 
