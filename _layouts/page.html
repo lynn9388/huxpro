@@ -10,6 +10,10 @@ layout: default
         {%- if site.sidebar == false -%}
         <!-- Postlist Container -->
         <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1 postlist-container">
+            {%- if page.multilingual -%}
+            {%- include language-selector.html -%}
+            {%- endif -%}
+
             {{ content }}
         </div>
         <!-- Sidebar Container -->
@@ -19,6 +23,10 @@ layout: default
         {%- else -%}
         <!-- Postlist Container -->
         <div class="col-lg-8 col-lg-offset-1 col-md-8 col-md-offset-1 col-sm-12 col-xs-12 postlist-container">
+            {%- if page.multilingual -%}
+            {%- include language-selector.html -%}
+            {%- endif -%}
+
             {{ content }}
         </div>
         <!-- Sidebar Container -->
