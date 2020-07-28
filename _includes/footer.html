@@ -3,10 +3,10 @@
     <div class="container">
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-                {% include sns.html center=true %}
+                {%- include sns.html center=true -%}
 
                 <p class="copyright text-muted">
-                    {% assign now_year = 'now' | date: '%Y' | plus: 0 %}
+                    {%- assign now_year = 'now' | date: '%Y' | plus: 0 -%}
                     Copyright &copy; {{ site.owner }} {{ site.published_at }}{% if site.published_at < now_year %}-{{ now_year }}{% endif %}
                     <br>
                     Powered by <a href="https://github.com/lynn9388/huxpro">Huxpro</a> |
@@ -45,12 +45,12 @@
 </script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.0.5/es5/tex-chtml.js" integrity="sha512-WIPUeuVusAT6dUtN6xKArYCBEa76ltyvaz3ltvQd+dy7ISdGJv1Y3y7eDBEF986YfNtmZGLdAaEBSgeBb+8OSg==" crossorigin="anonymous"></script>
 
-{% if page.multilingual %}
+{%- if page.multilingual -%}
 <!-- Multilingual -->
 <script src="{{ site.baseurl }}/assets/js/multilingual.js"></script>
-{% endif %}
+{%- endif -%}
 
-{% if page.layout == 'post' and page.no_catalog != false %}
+{%- if page.layout == 'post' and page.no_catalog != false -%}
 <!-- Side Catalog -->
 <script src="{{ site.baseurl }}/assets/js/catalog.js"></script>
-{% endif %}
+{%- endif -%}

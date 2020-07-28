@@ -5,14 +5,14 @@
         <a href="{{'/about/' | prepend: site.baseurl }}">ABOUT ME</a>
     </h5>
     <div class="short-about">
-        {% if site.sidebar_avatar %}
+        {%- if site.sidebar_avatar -%}
         <img src="{{ site.baseurl }}{{ site.sidebar_avatar }}" />
-        {% endif %}
+        {%- endif -%}
 
-        {% if site.sidebar_about_description %}
+        {%- if site.sidebar_about_description -%}
         <p>{{ site.sidebar_about_description }}</p>
-        {% endif %}
+        {%- endif -%}
 
-        {% include sns.html %}
+        {%- include sns.html -%}
     </div>
 </section>

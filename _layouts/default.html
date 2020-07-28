@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html lang="{{ page.lang | default: site.lang | default: 'en' }}">
-    {% include head.html %}
+    {%- include head.html -%}
     <body>
-        {% include nav.html %}
-        {% include search.html %}
+        {%- include nav.html -%}
+        {%- include search.html -%}
 
         {{ content }}
 
-        {% include footer.html %}
+        {%- include footer.html -%}
     </body>
 </html>

@@ -2,7 +2,7 @@
 layout: default
 ---
 
-{% include header.html type='post' %}
+{%- include header.html type='post' -%}
 
 <!-- Post Content -->
 <style>
@@ -21,16 +21,16 @@ layout: default
         <div class="row">
             <!-- Post Container -->
             <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1 post-container">
-                {% if page.multilingual %}
-                    {% include language-selector.html %}
-                {% endif %}
+                {%- if page.multilingual -%}
+                    {%- include language-selector.html -%}
+                {%- endif -%}
 
                 {{ content }}
 
-                {% include pager.html %}
+                {%- include pager.html -%}
             </div>
 
-            {% unless page.no-catalog %}
+            {%- unless page.no-catalog -%}
             <!-- Side Catalog Container -->
             <div class="col-lg-2 col-lg-offset-0 visible-lg-block sidebar-container catalog-container">
                 <div class="side-catalog">
@@ -41,11 +41,11 @@ layout: default
                     <ul class="catalog-body"></ul>
                 </div>
             </div>
-            {% endunless %}
+            {%- endunless -%}
 
             <!-- Sidebar Container -->
             <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1 sidebar-container">
-                {% include featured-tags.html bottom=true %}
+                {%- include featured-tags.html bottom=true -%}
             </div>
         </div>
     </div>

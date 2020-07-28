@@ -2,7 +2,7 @@
 layout: default
 ---
 
-{% include header.html type='keynote' %}
+{%- include header.html type='keynote' -%}
 
 <!-- Post Content -->
 <style>
@@ -22,12 +22,12 @@ layout: default
             <!-- Post Container -->
             <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1 post-container">
                 {{ content }}
-                {% include pager.html %}
+                {%- include pager.html -%}
             </div>
 
             <!-- Sidebar Container -->
             <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1 sidebar-container">
-                {% include featured-tags.html %}
+                {%- include featured-tags.html -%}
             </div>
         </div>
     </div>

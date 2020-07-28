@@ -2,30 +2,30 @@
 layout: default
 ---
 
-{% include header.html type='page' %}
+{%- include header.html type='page' -%}
 
 <!-- Main Content -->
 <div class="container">
     <div class="row">
-        {% if site.sidebar == false %}
+        {%- if site.sidebar == false -%}
         <!-- Postlist Container -->
         <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1 postlist-container">
             {{ content }}
         </div>
         <!-- Sidebar Container -->
         <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1 sidebar-container">
-            {% include featured-tags.html %}
+            {%- include featured-tags.html -%}
         </div>
-        {% else %}
+        {%- else -%}
         <!-- Postlist Container -->
         <div class="col-lg-8 col-lg-offset-1 col-md-8 col-md-offset-1 col-sm-12 col-xs-12 postlist-container">
             {{ content }}
         </div>
         <!-- Sidebar Container -->
         <div class="col-lg-3 col-lg-offset-0 col-md-3 col-md-offset-0 col-sm-12 col-xs-12 sidebar-container">
-            {% include featured-tags.html %}
-            {% include short-about.html %}
+            {%- include featured-tags.html -%}
+            {%- include short-about.html -%}
         </div>
-        {% endif %}
+        {%- endif -%}
     </div>
 </div>

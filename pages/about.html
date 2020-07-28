@@ -6,12 +6,12 @@ header-img: "/assets/img/about-bg.jpg"
 multilingual: true
 ---
 
-{% include language-selector.html %}
+{%- include language-selector.html -%}
 
 <!-- Chinese Version -->
 <div class="zh post-container">
     {% capture about_zh %}{% include_relative about/zh.md %}{% endcapture %}
-    {{ about_zh | markdownify }}}
+    {{ about_zh | markdownify }}
 </div>
 
 <!-- English Version -->
