@@ -22,12 +22,15 @@ github_username:    lynn9388
 
 # Build settings
 paginate: 10
-permalink: pretty
 timezone: Asia/Shanghai
 kramdown:
   syntax_highlighter_opts:
     block:
       line_numbers: true
+collections:
+  pages:
+    output: true
+    permalink: /:path/
 plugins:
   - jekyll-feed
   - jekyll-paginate
