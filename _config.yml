@@ -1,15 +1,15 @@
 # Site settings
 title: Huxpro
-description: Jekyll theme
+description: A clean and refined Jekyll theme.
 header_img: /assets/img/home.jpeg
 baseurl: /huxpro
 owner: Lynn
-published_at: 2019
+published_at: 2020
 
 # Sidebar settings
 sidebar: true
 sidebar_avatar: /assets/img/avatar.jpeg
-sidebar_about_description: For the next quantum leap<br>离开世界之前，一切都是过程
+sidebar_about_description: 以直觉和性情生存，<br>喜欢一切美丽的事物。
 
 # SNS settings
 RSS: true
