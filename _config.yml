@@ -1,7 +1,7 @@
 # Site settings
 title: Huxpro
 description: Jekyll theme
-header-img: /assets/img/home-bg.jpg
+header_img: /assets/img/home-bg.jpg
 baseurl: /huxpro
 owner: Lynn
 published_at: 2019

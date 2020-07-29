@@ -3,23 +3,23 @@
 <style type="text/css">
     header.intro-header {
         position:         relative;
-        background-image: url('{{ site.baseurl }}/{% if page.header-img %}{{ page.header-img }}{% else %}{{ site.header-img }}{% endif %}');
-        background:       {{ page.header-bg-css }};
+        background-image: url('{{ site.baseurl }}{% if page.header_img %}{{ page.header_img }}{% else %}{{ site.header_img }}{% endif %}');
+        background:       {{ page.header_bg_css }};
     }
-    {%- if page.header-mask -%}
+    {%- if page.header_mask -%}
     header.intro-header .header-mask {
         width:      100%;
         height:     100%;
         position:   absolute;
-        background: rgba(0,0,0, {{ page.header-mask }});
+        background: rgba(0,0,0, {{ page.header_mask }});
     }
     {%- endif -%}
 </style>
-<header class="intro-header{% if page.header-style == 'text' %} style-text{% endif %}">
+<header class="intro-header{% if page.header_style == 'text' %} style-text{% endif %}">
     <div class="header-mask"></div>
-    {%- if page.header-img-credit -%}
+    {%- if page.header_img_credit -%}
     <div class="header-img-credit">
-        Image by <a href="//{{page.header-img-credit-href}}">{{ page.header-img-credit }}</a>
+        Image by <a href="//{{ page.header_img_credit_href }}">{{ page.header_img_credit }}</a>
     </div>
     {%- endif -%}
     <div class="container">
@@ -77,7 +77,7 @@
 </header>
 {%- elsif include.type == 'page' -%}
 <!-- Page Header -->
-<header class="intro-header" style="background-image: url('{{ site.baseurl }}/{% if page.header-img %}{{ page.header-img }}{% else %}{{ site.header-img }}{% endif %}')">
+<header class="intro-header" style="background-image: url('{{ site.baseurl }}{% if page.header_img %}{{ page.header_img }}{% else %}{{ site.header_img }}{% endif %}')">
     <div class="container">
         <div class="row">
         <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">

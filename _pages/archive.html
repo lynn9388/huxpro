@@ -2,7 +2,7 @@
 layout: default
 title: Archive
 description: keep hungry keep foolish
-header-img: /assets/img/tag-bg.jpg
+header_img: /assets/img/tag-bg.jpg
 ---
 
 {%- include header.html type='page' short=true -%}
@@ -15,7 +15,7 @@ header-img: /assets/img/tag-bg.jpg
             <div id='tag_cloud' class="tags tags-sup js-tags">
                 <a class="tag-button--all" data-encode="">
                     Show All
-                    <sup>{{site.posts.size}}</sup>
+                    <sup>{{ site.posts.size }}</sup>
                 </a>
 
                 {%- capture tags -%}

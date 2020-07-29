@@ -1,5 +1,5 @@
 <!-- Navigation -->
-<nav class="navbar navbar-default navbar-custom navbar-fixed-top{% if page.nav-style == 'invert' or page.header-style == 'text' %} invert{% endif %}">
+<nav class="navbar navbar-default navbar-custom navbar-fixed-top{% if page.nav_style == 'invert' or page.header_style == 'text' %} invert{% endif %}">
     <div class="container-fluid">
         <!-- Brand and toggle get grouped for better mobile display -->
         <div class="navbar-header page-scroll">
@@ -20,7 +20,7 @@
                         <a href="{{ site.baseurl }}/">Home</a>
                     </li>
                     {%- for page in site.pages -%}
-                        {%- if page.title and page.hide-in-nav != true -%}
+                        {%- if page.title and page.hide_in_nav != true -%}
                     <li>
                         <a href="{{ site.baseurl }}{{ page.url }}">{{ page.title }}</a>
                     </li>
