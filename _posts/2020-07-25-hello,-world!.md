@@ -1,25 +1,10 @@
 ---
-layout:     post
-title:      "Hello, world!"
-subtitle:   "Hi"
-date:       2020-07-25 12:00:00
-author:     "Lynn"
-header_img: /assets/img/about-bg.jpg
-tags:
-  - Jekyll
-  - Markdown
+title:    Hello, world!
+subtitle: Test example
+tags: [Jekyll, Markdown]
 ---
 
-The post in website based on Jekyll is typically written with Markdown, which is just a lightweight markup language with plain text formatting syntax. That means you can write it with any text editor like [Sublime Text](https://www.sublimetext.com), and [Atom](https://atom.io), but I recommend [Visual Studio Code](https://code.visualstudio.com/) (aka VS Code).
-
-### Extensions
-
-The main reason I recommend VS Code is to have an active community that develops a number of extensions to extend its capabilities. Here are some extensions I used for Markdown.
-
-- [markdownlint](https://marketplace.visualstudio.com/items?itemName=DavidAnson.vscode-markdownlint)
-- [Markdown All in One](https://marketplace.visualstudio.com/items?itemName=yzhang.markdown-all-in-one)
-- [Markdown Preview Github Styling](https://marketplace.visualstudio.com/items?itemName=bierner.markdown-preview-github-styles)
-- [Markdown yaml Preamble](https://marketplace.visualstudio.com/items?itemName=bierner.markdown-yaml-preamble)
+The post in website based on Jekyll is typically written with Markdown, which is just a lightweight markup language with plain text formatting syntax. This makes it very easy to create and publish posts.
 
 ## Create a Post
 
@@ -32,19 +17,17 @@ YEAR-MONTH-DAY-name-of-post.md
 Where `YEAR` is a four-digit number, `MONTH` and `DAY` are both two-digit numbers. For example, the following are examples of valid post filenames:
 
 ```bash
-2019-04-18-getting-started-with-light-blog.md
-2019-07-19-writing-with-light-blog.md
+2020-07-30-test-example.md
 ```
 
-All blog post files must begin with [front matter](https://jekyllrb.com/docs/front-matter/) which is typically used to set a [layout](https://jekyllrb.com/docs/layouts/) or other metadata. So far the [Light Blog](https://github.com/lynn9388/light-blog) supports `title` and `tags` variables, and only `title` is required for every post. For example, the post you are reading now is like this:
+All blog post files must begin with [front matter](https://jekyllrb.com/docs/front-matter/) which is typically used to set a [layout](https://jekyllrb.com/docs/layouts/) or other metadata. The post you are reading now is like this:
 
 ```markdown
 ---
-title: Writing with Light Blog
+title:    Hello, world!
+subtitle: Test example
 tags: [Jekyll, Markdown]
 ---
-
-More content here.
 ```
 
 ## Add More Content
@@ -253,7 +236,7 @@ You may want to use a [table generator](https://www.tablesgenerator.com/markdown
 
 #### MathJax
 
-Light Blog supports [MathJax](https://www.mathjax.org), which means you can embed mathematics with $$\rm\LaTeX$$.
+The theme supports [MathJax](https://www.mathjax.org), which means you can embed mathematics with $$\rm\LaTeX$$.
 
 ```markdown
 $$E = mc^2$$
