@@ -31,7 +31,6 @@ function render() {
         $en.style.display = "none";
         $en.classList.remove("active");
     }
-    generateCatalog(".catalog-body");
 }
 
 render();
