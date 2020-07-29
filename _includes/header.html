@@ -1,21 +1,20 @@
 {%- if include.type == 'post' -%}
 <!-- Post Header -->
+{%- if page.header_img -%}
 <style type="text/css">
     header.intro-header {
         position:         relative;
-        background-image: url('{{ site.baseurl }}{% if page.header_img %}{{ page.header_img }}{% else %}{{ site.header_img }}{% endif %}');
-        background:       {{ page.header_bg_css }};
+        background-image: url('{{ site.baseurl }}{{ page.header_img }}');
     }
-    {%- if page.header_mask -%}
     header.intro-header .header-mask {
         width:      100%;
         height:     100%;
         position:   absolute;
-        background: rgba(0,0,0, {{ page.header_mask }});
+        background: rgba(0, 0, 0, 0.3);
     }
-    {%- endif -%}
 </style>
-<header class="intro-header{% if page.header_style == 'text' %} style-text{% endif %}">
+{%- endif -%}
+<header class="intro-header{% unless page.header_img %} style-text{% endunless %}">
     <div class="header-mask"></div>
     {%- if page.header_img_credit -%}
     <div class="header-img-credit">

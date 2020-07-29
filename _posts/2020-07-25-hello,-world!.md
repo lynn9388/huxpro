@@ -4,8 +4,7 @@ title:      "Hello, world!"
 subtitle:   "Hi"
 date:       2020-07-25 12:00:00
 author:     "Lynn"
-header_img: "/assets/img/about-bg.jpg"
-header_mask: 0.3
+header_img: /assets/img/about-bg.jpg
 tags:
   - Jekyll
   - Markdown
