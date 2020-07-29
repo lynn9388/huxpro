@@ -76,14 +76,3 @@ header_img: /assets/img/tag-bg.jpg
         </div>
     </div>
 </div>
-
-<!-- Tag Cloud -->
-<script src="{{ site.baseurl }}/assets/js/archive.js"></script>
-<script>
-    async("{{ site.baseurl }}/assets/js/tagcloud.js", function () {
-        $.fn.tagcloud.defaults = {
-            color: { start: '#bbbbee', end: '#2f93b4' },
-        };
-        $('#tag_cloud a').tagcloud();
-    })
-</script>
