@@ -27,7 +27,29 @@ layout: default
 
                 {{ content }}
 
-                {%- include pager.html -%}
+                <!-- Post Pager -->
+                <div>
+                    <hr style="visibility: hidden;">
+                    <ul class="pager">
+                        {%- if page.previous.url -%}
+                        <li class="previous">
+                            <a href="{{ page.previous.url | prepend: site.baseurl | replace: '//', '/' }}" data-toggle="tooltip" data-placement="top" title="{{ page.previous.title }}">
+                                Previous<br>
+                                <span>{{ page.previous.title }}</span>
+                            </a>
+                        </li>
+                        {%- endif -%}
+                        {%- if page.next.url -%}
+                        <li class="next">
+                            <a href="{{ page.next.url | prepend: site.baseurl | replace: '//', '/' }}" data-toggle="tooltip" data-placement="top" title="{{ page.next.title }}">
+                                Next<br>
+                                <span>{{ page.next.title }}</span>
+                            </a>
+                        </li>
+                        {%- endif -%}
+                    </ul>
+                    <hr style="visibility: hidden;">
+                </div>
             </div>
 
             {%- unless page.no_catalog -%}
