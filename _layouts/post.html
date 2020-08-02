@@ -50,6 +50,10 @@ layout: default
                     </ul>
                     <hr style="visibility: hidden;">
                 </div>
+
+                {%- if site.comments_repository -%}
+                    {%- include comments.html -%}
+                {%- endif -%}
             </div>
 
             {%- unless page.no_catalog -%}

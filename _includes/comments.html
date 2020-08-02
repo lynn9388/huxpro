@@ -1,0 +1,13 @@
+{%- if site.comments_repository -%}
+    {%- assign comments_repository_owner = site.comments_repository | split: "/" | first -%}
+    {%- if site.github.owner_name == comments_repository_owner -%}
+<!-- Comments -->
+<script src="https://utteranc.es/client.js"
+        repo="{{ site.comments_repository }}"
+        issue-term="pathname"
+        theme="github-light"
+        crossorigin="anonymous"
+        async>
+</script>
+    {%- endif -%}
+{%- endif -%}

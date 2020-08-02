@@ -24,6 +24,10 @@ github_username:    lynn9388
 # Google Analytics settings (https://analytics.google.com/)
 ga_measurement_id:
 
+# Comments settings (https://utteranc.es/)
+# You must use your own repository, otherwise it won't work.
+comments_repository: lynn9388/comments
+
 # Build settings
 paginate: 10
 timezone: Asia/Shanghai
