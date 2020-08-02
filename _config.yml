@@ -12,13 +12,14 @@ sidebar_avatar: /assets/img/avatar.jpeg
 sidebar_about_description: 以直觉和性情生存，<br>喜欢一切美丽的事物。
 
 # SNS settings
-RSS: true
-zhihu_username:     lynn9388
-weibo_username:     lynn9388
-linkedin_username:  lynn9388
+RSS:                true
+email:              lynn9388@gmail.com
+github_username:    lynn9388
+#zhihu_username:     lynn9388
+#weibo_username:     lynn9388
+#linkedin_username:  lynn9388
 #twitter_username:   lynn9388
 #facebook_username:  lynn9388
-github_username:    lynn9388
 
 # Build settings
 paginate: 10
