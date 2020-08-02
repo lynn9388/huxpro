@@ -5,6 +5,9 @@
 
     {%- seo -%}
     {%- feed_meta -%}
+    {%- if site.ga_measurement_id -%}
+        {%- include google-analytics.html -%}
+    {%- endif -%}
 
     <!-- Favicon -->
     <link rel="shortcut icon" href="{{ site.baseurl }}/favicon.ico">

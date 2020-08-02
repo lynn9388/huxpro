@@ -21,6 +21,9 @@ github_username:    lynn9388
 #twitter_username:   lynn9388
 #facebook_username:  lynn9388
 
+# Google Analytics settings (https://analytics.google.com/)
+ga_measurement_id:
+
 # Build settings
 paginate: 10
 timezone: Asia/Shanghai
