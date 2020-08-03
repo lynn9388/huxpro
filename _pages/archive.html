@@ -19,7 +19,7 @@ header_img: /assets/img/archive.jpeg
                 </a>
 
                 {%- capture tags -%}
-                {%- for tag in site.tags -%}
+                    {%- for tag in site.tags -%}
                 <a data-sort="{{ site.posts.size | minus: tag[1].size | prepend: '0000' | slice: -4, 4 }}"
                     data-encode="{{ tag[0] | strip | url_encode }}"
                     class="tag-button"
@@ -27,7 +27,7 @@ header_img: /assets/img/archive.jpeg
                     {{ tag[0] }}
                     <sup>{{tag[1].size}}</sup>
                 </a>__SEPERATOR__
-                {%- endfor -%}
+                    {%- endfor -%}
                 {%- endcapture -%}
                 {{ tags | split:'__SEPERATOR__' | sort }}
             </div>
