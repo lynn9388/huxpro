@@ -21,6 +21,9 @@ github_username:    lynn9388
 #twitter_username:   lynn9388
 #facebook_username:  lynn9388
 
+# Uncomment the line below if you use this theme as a GitHub Page's remote theme.
+#remote_theme: lynn9388/huxpro
+
 # Google Analytics settings (https://analytics.google.com/)
 ga_measurement_id:
 
